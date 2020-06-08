@@ -39,9 +39,10 @@ class ActionEndpoint(Resource):
 class Sensor(Resource):
     @staticmethod
     def post():
+        headers = request.headers
+        dev_id = headers.get('D-ID')
         current_temp = request.get_json(force=True).get('temp')
-        d_id = request.get_json(force=True).get('temp')
-        rooms_current_temp.update({d_id: current_temp})
+        rooms_current_temp.update({dev_id: current_temp})
 
 
 class Timestamp(Resource):
