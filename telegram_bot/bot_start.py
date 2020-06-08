@@ -92,7 +92,8 @@ def one(update, context):
 
     keyboard = [
         [InlineKeyboardButton(f"Current temp - {rooms_current_temp.get('room1')}", callback_data='room1_up'),
-         InlineKeyboardButton("Switch temp", callback_data='room1_change_temp')]
+         InlineKeyboardButton("Switch temp", callback_data='room1_change_temp')],
+        [InlineKeyboardButton("back", callback_data='manual')]
     ]
     if re.match('room1_change_temp', query.data):
 
@@ -146,7 +147,8 @@ def two(update, context):
 
     keyboard = [
         [InlineKeyboardButton(f"Current temp - {rooms_current_temp.get('room2')}", callback_data='room2_up'),
-         InlineKeyboardButton("Switch temp", callback_data='room2_change_temp')]
+         InlineKeyboardButton("Switch temp", callback_data='room2_change_temp')],
+        [InlineKeyboardButton("back", callback_data='manual')]
     ]
     if re.match('room2_change_temp', query.data):
 
@@ -199,7 +201,8 @@ def three(update, context):
 
     keyboard = [
         [InlineKeyboardButton(f"Current temp - {rooms_current_temp.get('room3')}", callback_data='room1_up'),
-         InlineKeyboardButton("Switch temp", callback_data='room3_change_temp')]
+         InlineKeyboardButton("Switch temp", callback_data='room3_change_temp')],
+        [InlineKeyboardButton("back", callback_data='manual')]
     ]
     if re.match('room3_change_temp', query.data):
 
