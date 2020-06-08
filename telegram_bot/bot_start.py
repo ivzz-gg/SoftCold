@@ -121,8 +121,14 @@ def one(update, context):
 
                     return FIRST
             except:
-                if current_time - time.time() == 15:
-                    break
+                if current_time - time.time() == 8:
+                    reply_markup = InlineKeyboardMarkup(keyboard)
+                    query.edit_message_text(
+                        text="Timeout",
+                        reply_markup=reply_markup
+                    )
+
+                    return FIRST
                 continue
 
             break
@@ -168,8 +174,14 @@ def two(update, context):
 
                     return FIRST
             except:
-                if current_time - time.time() == 15:
-                    break
+                if current_time - time.time() == 8:
+                    reply_markup = InlineKeyboardMarkup(keyboard)
+                    query.edit_message_text(
+                        text="Timeout",
+                        reply_markup=reply_markup
+                    )
+
+                    return FIRST
                 continue
 
             break
@@ -215,8 +227,14 @@ def three(update, context):
 
                     return FIRST
             except:
-                if current_time - time.time() == 15:
-                    break
+                if current_time - time.time() == 8:
+                    reply_markup = InlineKeyboardMarkup(keyboard)
+                    query.edit_message_text(
+                        text="Timeout",
+                        reply_markup=reply_markup
+                    )
+
+                    return FIRST
                 continue
 
             break
